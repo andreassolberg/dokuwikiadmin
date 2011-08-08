@@ -1,0 +1,433 @@
+.inneremailbox {
+	font-family: monospace; 
+	border: 1px solid #ccc; 
+	padding: .2em 2em; 
+	margin: .1em;
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+
+div.fcol {
+	width: 300px; float: left;
+}
+
+
+
+div.fcol {
+	border: 1px solid #eee; 
+	margin: 5px 5px 1em 5px; 
+	padding: 4px;
+/*	display: table;*/
+}
+.fcoli {
+	display: block; font-size: large; width: 95%
+}
+div.subcolcontainer {
+/*	display: table-row;*/
+}
+input.fscoli {
+/*	display: table-cell;*/
+}
+
+
+
+
+/* ------ Buttons  ----- */
+
+
+
+a {
+	cursor: pointer;
+}
+
+a.button:link {
+	color: #444 ! important;
+}
+a.button {
+	outline: none; /* hide dotted outline in Firefox */
+	margin-top: 3px; margin-bottom: 3px;
+
+	background: transparent url('buttons/bg_button_a.png') no-repeat scroll top right;
+	color: #444 ! important;
+	display: block;
+	float: left;
+	font: normal 12px arial, sans-serif;
+	height: 24px;
+	margin-right: 6px;
+	padding-right: 18px; /* sliding doors padding */
+	text-decoration: none;
+	border: none ! important;
+}
+
+a.button span {
+	background: transparent url('buttons/bg_button_span.png') no-repeat;
+	display: block;
+	line-height: 14px;
+	padding: 5px 0 5px 18px;
+}
+.clear { /* generic container (i.e. div) for floating buttons */
+	overflow: hidden;
+	width: 100%;
+}
+
+
+a.button:active {
+	background-position: bottom right;
+	color: #000 ! important;
+	outline: none; /* hide dotted outline in Firefox */
+}
+
+a.button:active span {
+	background-position: bottom left;
+	padding: 6px 0 4px 18px; /* push text down 1px */
+}
+
+
+/* --- links --- */
+
+a, a:link, a:visited, a:active {
+    color: #633;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+a.lesmer {
+    float: right;
+    margin: 1em;
+}
+
+
+
+
+
+
+/* --- infobox --- */
+
+
+
+div.infobox {
+	margin: .6em .1em;
+	padding: .3em;
+	border: 1px solid #999;
+	background: #ddd;
+	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+div.infobox.maxnum {
+}
+div.infobox.expire {
+}
+div.infobox.registeremail {
+}
+
+
+
+input.fscoli {
+	display: inline; 
+	margin: 0px; 
+	width: 80px;
+}
+
+
+
+
+
+
+/* ----------- */
+
+table#tlayout, table#tlayout td {
+	border: none;
+}
+
+.unicode {
+	font-family: "Unicode Symbols", "Times New Roman", "Apple Symbols","Arial Unicode MS";
+}
+
+
+div.fcol.notinuse{
+/*	background: #eee;*/
+/*			color: #777; */
+}
+div.fcol.notinuse input{
+	background: #fff;
+}
+
+
+.statusupdates {
+	font-size: 80%;
+}
+ul.statusupdates  {
+	list-style:none inside;
+	padding:0px;
+	margin:0px;
+}
+
+div#createnew {
+	clear: left; 
+	border: 1px solid #ccc; 
+	background: #f4f4f4; 
+	padding:1em; 
+	width: 300px; 
+	margin: 1em .5em .5em .5em;
+	border-radius: 15px;
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px;
+}
+
+
+
+/* --- List entries on frontpage --- */
+
+div.lentry {
+	border-top: 1px solid #eee;
+	margin-top: 4px;
+	margin-bottom: 1.3em;
+}
+div.lentry div.lheader {
+	font-size: 110%;
+}
+div.lentry div.lbody {
+	color: #555;
+}
+div.lentry div.lowner {
+	color: #888;
+	font-size: 80%;
+}
+
+
+
+
+
+#foodletabs {
+	font-size: 90%;
+}
+
+
+
+img.linkicon {
+}
+span.grey {
+	color: #aaa;
+}
+
+
+html{
+    height: 100%;
+
+/*    font-family: Arial, Verdana, sans-serif;*/
+}
+body{
+    height: 100%;
+}
+
+fieldset .submitbutton {
+    vertical-align: middle;
+    margin: 0 3px;
+}
+fieldset select {
+    /*vertical-align: middle;
+    margin: 3px 0;*/
+}
+
+fieldset legend{
+    display: none;
+}
+
+p {
+    margin-top:     10px;
+    margin-bottom:  10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.extbox:hover {
+		border: 1px solid #aa5; 
+}
+div.extbox {
+	float: right; 
+	border: 1px dashed #cc8; 
+	background: #fffff1; 
+	padding: .4em; 
+	margin: 1em 0em .4em .4em;
+
+}
+div.extbox a {
+	color: #664;
+	text-decoration: none;
+/*	border-bottom: 1px dashed #cc8; */
+}
+div.extbox a:hover {
+	border-bottom: 1px solid #aa5;
+	text-decoration: none;
+}
+
+
+.commentline {
+	padding: 3px 10px 3px 3em; 
+	color: #777; 
+}
+.list th {
+	font-weight: normal;
+}
+
+
+
+
+.yesimg {
+	margin: 0px;
+	border: 0px;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+	margin: .6em;
+}
+
+td {
+	border: 1px solid #ccc;
+}
+td,th {
+	border: 1px solid #aaa;
+/*	text-align: center; */
+}
+th {
+	background: #dda;
+	padding: .1em 1em .1em 1em;
+
+}
+td.yes {
+	background: #9c9;
+	color: white;
+	text-align: center;
+}
+td.no {
+	text-align: center;
+	background: #edd;
+	color: #c77;
+}
+tr.you td input.comment {
+	background: #f7f7f7;
+	background-image: url('/res/notes.png');
+	background-repeat: no-repeat;
+ 	background-position: 3px 5px; 
+	color: #662;
+	border: 1px solid #ccc;
+	margin: 5px;
+	padding: 5px 5px 5px 30px;
+	width: 90%;
+
+}
+td.center {
+	text-align: center;
+}
+tr.you td {
+	background: #eed;
+
+
+}
+tr.you td.yes {
+	background: #bea;
+}
+td.count {
+	text-align: center;
+	font-size: large;
+}
+td.highest {
+	background: #373;
+	color: white;
+	font-weight: bold;
+}
+
+td.sunday {
+	background: #B98B8F;
+	color: white;
+}
+td.grey {
+	background: #ccc;
+}
+td.before {
+	background: #eee;
+	color: black;
+}
+
+fieldset,img {
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+}
+caption,th {
+	text-align:center;
+}
+
+dt {
+	font-size: 105%;
+	color: #600;
+	font-weight: bold;
+}
+dd p {
+	margin: 0px 1em .1em 0px;
+}
+
+html {
+	font-size: 90% ! important;
+}
+
+table.list {
+	border: 1px solid #ccc;
+	font-family: "Arial Narrow", "arial", sans-serif;
+}
+div.lang {
+	font-family: "Arial Narrow", "arial", sans-serif;
+}
+table.list tr.header {
+	background: #eee;
+	border-bottom: 1px solid #ccc;
+}
+table.list td {
+	padding: 2px;
+}
+table.list td.odd {
+	background: #e5e5e5;
+	
+}
+div#fcols table.layout {
+	width: 100%;
+	border: none;
+}
+div#fcols table.layout  tr.layout  td.layout {
+	vertical-align: top;
+	border: 0px;
+	padding: .3em;
+}
+
+
+
+
+
+
+
+

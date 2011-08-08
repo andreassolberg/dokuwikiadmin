@@ -1,0 +1,54 @@
+table.list {
+	border: 1px solid #ccc;
+}
+table.list tr.header {
+	background: #eee ;
+	border-bottom: 1px solid #ccc;
+}
+table.list td {
+	padding: 2px;
+}
+table.list td.odd {
+	background: #e5e5e5;	
+}
+
+
+
+div#newwiki {
+	background: #eee;
+	padding: 1em;
+	border: 1px solid #aaa;
+}
+
+div.wikientry:nth-child(odd) {
+	background: #ddd;
+}
+div.wikientry:nth-child(even) {
+	background: #f5f5f5;
+}
+
+div.wikientry {
+	border-top: 1px solid #aaa;
+	border-left: 1px solid #aaa;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	padding: .5em;
+	margin: 0 0 .2em 0;
+}
+div.wikientry h3 { 
+	margin: 2px;
+}
+div.wikientry p { 
+	margin: 0;
+}
+div.wikientry img.linkicon {
+	border: none ! important;
+	position: relative;
+	top: 10px;
+	margin: 0px;
+}
+img.linkicon {
+}
+span.grey {
+	color: #aaa;
+}
