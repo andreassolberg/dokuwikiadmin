@@ -14,11 +14,7 @@
 				) 
 			); 
 		}
-		
-		if ($this->data['user']->hasCalendar()) {
-			echo  '. <img style="" alt="Calendar" title="Calendar" class="" src="/res/calendar-export.png" /> ' .
-				$this->t('youhavecalendar');
-		}
+
 		
 	} else {
 		echo($this->t('is_anonymous'));
@@ -34,12 +30,6 @@
 </div><!-- /#footer -->
 
 
-
-<script src="https://ssl.google-analytics.com/urchin.js" type="text/javascript"></script>
-<script type="text/javascript">
-_uacct = "UA-431110-13";
-urchinTracker();
-</script>
 
 </body>
 </html>

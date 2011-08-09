@@ -1,52 +1,7 @@
 <?php
 
-$path_extra = '/var/simplesamlphp-openwiki_new/lib';
-$path = ini_get('include_path');
-$path = $path_extra . PATH_SEPARATOR . $path;
-ini_set('include_path', $path);
+include('_include.php');
 
-
-include('/var/simplesamlphp-openwiki_new/lib/_autoload.php');
-
-
-
-/*
- * Loading OpenWiki libraries
- */
-require_once('../lib/OpenWiki.class.php');
-require_once('../lib/OpenWikiDictionary.class.php');
-require_once('../lib/TimeLimitedToken.class.php');
-
-/**
- * Initializating configuration
- */
-SimpleSAML_Configuration::init(dirname(dirname(__FILE__)) . '/config', 'wikiplex');
-SimpleSAML_Configuration::init('/var/simplesamlphp-openwiki_new/config');
-
-$config = SimpleSAML_Configuration::getInstance('wikiplex');
-
-
-include('../config/groups.php');
-
-
-
-
-/* Load simpleSAMLphp, configuration and metadata */
-$as = new SimpleSAML_Auth_Simple('default-sp');
-$as->requireAuth(array(
-    'idp' => 'https://idp.feide.no',
-));
-$attributes = $as->getAttributes();
-
-
-
-$username = 'na';
-if (isset($attributes['mail'])) {
-	$username = $attributes['mail'][0];
-}
-if (isset($attributes['eduPersonPrincipalName'])) {
-	$username = $attributes['eduPersonPrincipalName'][0];
-}
 
 
 

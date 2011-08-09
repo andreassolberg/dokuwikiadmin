@@ -1,74 +1,13 @@
 <?php
 
 
-$path_extra = '/var/simplesamlphp-openwiki_new/lib';
-$path = ini_get('include_path');
-$path = $path_extra . PATH_SEPARATOR . $path;
-ini_set('include_path', $path);
+include('_include.php');
 
-
-include('/var/simplesamlphp-openwiki_new/lib/_autoload.php');
-
-
-
-
-
-
-
-/*
- * Loading OpenWiki libraries*
- */
-require_once('../lib/OpenWiki.class.php');
-require_once('../lib/OpenWikiDictionary.class.php');
-require_once('../lib/TimeLimitedToken.class.php');
-
-session_start();
-
-/**
- * Initializating configuration
- */
-SimpleSAML_Configuration::init(dirname(dirname(__FILE__)) . '/config', 'wikiplex');
-SimpleSAML_Configuration::init('/var/simplesamlphp-openwiki_new/config');
-
-$config = SimpleSAML_Configuration::getInstance('wikiplex');
-
-
-
-include('../config/groups.php');
-
-
-
-/* Load simpleSAMLphp, configuration and metadata */
-$as = new SimpleSAML_Auth_Simple('default-sp');
-$as->requireAuth(array(
-    'idp' => 'https://idp.feide.no',
-));
-$attributes = $as->getAttributes();
-
-
-
-
-$username = 'na';
-if (isset($attributes['mail'])) {
-	$username = $attributes['mail'][0];
-}
-if (isset($attributes['eduPersonPrincipalName'])) {
-	$username = $attributes['eduPersonPrincipalName'][0];
-}
-
-
-if (!isset($_SESSION['wikiplex_cachedwiki'])) {
-	$_SESSION['wikiplex_cachedwiki'] = array();
-}
 
 
 
 
 try {
-	
-#	echo ('IdP users: ' . $attributes['idp'][0]);
-	if ($attributes['idp'][0] == 'https://openidp.feide.no') 
-		throw new Exception('Currently OpenWiki administration interface is not available to OpenIdP users.');
 	
 	/*
 	 * What wiki are we talking about?
@@ -106,6 +45,14 @@ try {
 		#$ow->setInfo('Test wiki', 'This is a wiki Andreas is testing', 'andreas_solberg_uninett', 3);
 	
 		if (isset($_REQUEST['createnewsubmit'])) {
+			
+			$okrealms = $config->getValue('okrealms');
+			
+
+			
+			if (!in_array($realm, $okrealms)) {
+				throw new Exception('Users from realm [' . $realm . '] are not authorized to create new wikis. As of summer 2011, creating new wikis is restricted to employees from UNINETT AS. We decided to restrict access until we have decided on a strategy on what set of collaboration tools UNINETT will offer... Contact helpdesk@uninett.no for questions or comments on this.');
+			}
 			
 			if (!preg_match('/^[a-z]+$/', $thiswiki))
 				throw new Exception('You tried to create a new wiki, but the wiki ID that you chose contained illegal characters. A wiki ID can only contain lowercase letters [a-z]!');

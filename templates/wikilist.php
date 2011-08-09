@@ -16,8 +16,6 @@
     </ul>
 
 
-
-
 	<div id="yourwiki">
 		
 		<h1>Your wikis</h1>
@@ -32,11 +30,11 @@
 
 				echo '<div class="wikientry">';
 
-				echo '<h3>' . $wiki->getName() . '</h3>';
-				echo '<p>' . $wiki->getDescr() . '</p>';
+				echo '<h3>' . htmlspecialchars($wiki->getName()) . '</h3>';
+				echo '<p>' . htmlspecialchars($wiki->getDescr()) . '</p>';
 
-				echo '<p><img class="linkicon" src="resources/web-link.png" /><a href="http://ow.feide.no/' . $wiki->getIdentifier() . ':start">Go to ' . $wiki->getName() . '</a> ';
-				echo '<img class="linkicon" src="resources/settings.png" /><a href="edit.php?edit=' . $wiki->getIdentifier() . '">Administer ' . $wiki->getName() . '</a></p>';
+				echo '<p><img class="linkicon" src="resources/web-link.png" /><a href="http://openwiki.uninett.no/' . $wiki->getIdentifier() . ':start">Go to ' . $wiki->getName() . '</a> ';
+				echo '<img class="linkicon" src="resources/settings.png" /><a href="edit.php?edit=' . $wiki->getIdentifier() . '">Administer ' . htmlspecialchars($wiki->getName()) . '</a></p>';
 
 
 				echo '</div>';
@@ -84,10 +82,10 @@
 				
 				echo '<div class="wikientry">';
 
-				echo '<h3>' . $wiki->getName() . '</h3>';
-				echo '<p>' . $wiki->getDescr() . '</p>';
+				echo '<h3>' . htmlspecialchars($wiki->getName()) . '</h3>';
+				echo '<p>' . htmlspecialchars($wiki->getDescr()) . '</p>';
 
-				echo '<p><img class="linkicon" src="resources/web-link.png" /><a href="http://ow.feide.no/' . $wiki->getIdentifier() . ':start">Go to ' . $wiki->getName() . '</a></p>';
+				echo '<p><img class="linkicon" src="resources/web-link.png" /><a href="http://openwiki.uninett.no/' . $wiki->getIdentifier() . ':start">Go to ' . $wiki->getName() . '</a></p>';
 
 				// echo '<pre>';
 				// print_r($wiki->getCustomACL());
@@ -118,11 +116,10 @@
 
 				echo '<div class="wikientry">';
 
-				echo '<h3>' . $wiki->getName() . '</h3>';
-				echo '<p>' . $wiki->getDescr() . '</p>';
+				echo '<h3>' . htmlspecialchars($wiki->getName()) . '</h3>';
+				echo '<p>' . htmlspecialchars($wiki->getDescr()) . '</p>';
 
-				echo '<p><img class="linkicon" src="resources/web-link.png" /><a href="http://ow.feide.no/' . $wiki->getIdentifier() . ':start">Go to ' . $wiki->getName() . '</a> ';
-		#		echo '<img src="resources/settings.png" /><a href="edit.php?edit=' . $wiki->getIdentifier() . '">Administer ' . $wiki->getName() . '</a></p>';
+				echo '<p><img class="linkicon" src="resources/web-link.png" /><a href="http://openwiki.uninett.no/' . $wiki->getIdentifier() . ':start">Go to ' . $wiki->getName() . '</a> ';
 
 				echo '</div>';
 			}
@@ -168,16 +165,6 @@
 
 </div>
 
-
-
-
-	
-	
-
-
-
-
-	
 
 
 	

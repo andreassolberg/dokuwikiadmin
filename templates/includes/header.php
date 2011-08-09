@@ -5,15 +5,15 @@
 	<meta charset="utf-8" />
 
 	<!-- Foodle: CSS -->	
-	<link rel="stylesheet" media="screen" type="text/css" href="/res/css/foodle.css" /> 
-	<link rel="stylesheet" media="screen" type="text/css" href="/res/css/foodle-layout.css" /> 
-	<link rel="stylesheet" media="screen" type="text/css" href="/res/css/openwiki.css" /> 
+	<link rel="stylesheet" media="screen" type="text/css" href="./res/css/foodle.css" /> 
+	<link rel="stylesheet" media="screen" type="text/css" href="./res/css/foodle-layout.css" /> 
+	<link rel="stylesheet" media="screen" type="text/css" href="./res/css/openwiki.css" /> 
 
 	<!-- JQuery -->
 
-	<script type="text/javascript" src="/res/js/jquery.js"></script>
-	<script type="text/javascript" src="/res/js/jquery-ui.js"></script>
-	<link rel="stylesheet" media="screen" type="text/css" href="/res/js/uitheme/jquery-ui-themeroller.css" />
+	<script type="text/javascript" src="./res/js/jquery.js"></script>
+	<script type="text/javascript" src="./res/js/jquery-ui.js"></script>
+	<link rel="stylesheet" media="screen" type="text/css" href="./res/js/uitheme/jquery-ui-themeroller.css" />
 	
 
 
@@ -35,9 +35,9 @@
 
 <!-- Red logo header -->
 <div id="header">	
-	<div id="logo">OpenWiki <span id="version">Version 1.0</span> 
+	<div id="logo">UNINETT OpenWiki <span id="version">Version 2.0</span> 
 	</div><!-- end #logo -->
-	<a href="http://rnd.feide.no"><img id="ulogo" alt="notes" src="/res/uninettlogo.gif" /></a>
+	<a href="http://uninett.no"><img id="ulogo" alt="notes" src="./res/uninettlogo.gif" /></a>
 </div><!-- end #header -->
 
 
